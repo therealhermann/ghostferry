@@ -2,6 +2,7 @@ version: "3"
 services:
   mysql-1:
     image: percona:5.7
+    platform: linux/amd64
     command: --server-id=1
       --log-bin=mysql-bin
       --max-binlog-size=4096
@@ -25,6 +26,7 @@ services:
 
   mysql-2:
     image: percona:5.7
+    platform: linux/amd64
     command: --server-id=2
       --log-bin=mysql-bin
       --binlog-format=ROW
@@ -47,6 +49,7 @@ services:
 
   mysql-3:
     image: percona:5.7
+    platform: linux/amd64
     command: --server-id=3
       --log-bin=mysql-bin
       --binlog-format=ROW
